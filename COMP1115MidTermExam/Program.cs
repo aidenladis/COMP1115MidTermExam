@@ -4,7 +4,7 @@ Console.WriteLine("Welcome to the guessing game, guess a number betweem 1-100 yo
 int randomNumber = new Random().Next(1, 100);
 int PlayerNum = int.Parse(Console.ReadLine());
 
-for (int i = 0; i < 7; i = i + 1)
+for (int i = 0; i < 6; i = i + 1)
 {
     if (PlayerNum < 1 || PlayerNum > 100)
     {
@@ -22,8 +22,7 @@ for (int i = 0; i < 7; i = i + 1)
         Console.WriteLine("Guess lower");
         PlayerNum = int.Parse(Console.ReadLine());
     }
-   
-    if (PlayerNum == randomNumber)
+    else if (PlayerNum == randomNumber)
     {
         Console.WriteLine("You got it!");
         if (i == 1)
@@ -52,7 +51,7 @@ for (int i = 0; i < 7; i = i + 1)
         }
 
     }
-    if (PlayerNum != randomNumber)
+    else
     {
         Console.WriteLine("You've used up all your tries, the number was " + randomNumber);
     }
