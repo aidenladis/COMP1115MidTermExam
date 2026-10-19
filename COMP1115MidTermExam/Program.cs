@@ -3,7 +3,7 @@
 int randomNumber = new Random().Next(1, 100);
 int PlayerNum = int.Parse(Console.ReadLine());
 
-for (int i = 0; i = i + 1)
+for (int i = 0; i < 7; i = i + 1)
 {
     if (PlayerNum == randomNumber)
     {
