@@ -12,11 +12,6 @@ for (int i = 0; i < 7; i = i + 1)
         PlayerNum = int.Parse(Console.ReadLine());
         continue;
     }
-    if (PlayerNum == randomNumber)
-    {
-        Console.WriteLine("You got it!");
-        break;
-    }
     else if (PlayerNum < randomNumber)
     {
         Console.WriteLine("Guess higher");
@@ -27,12 +22,38 @@ for (int i = 0; i < 7; i = i + 1)
         Console.WriteLine("Guess lower");
         PlayerNum = int.Parse(Console.ReadLine());
     }
+   
+    if (PlayerNum == randomNumber)
+    {
+        Console.WriteLine("You got it!");
+        if (i == 1)
+        {
+            Console.WriteLine(" get 100 points!");
+        }
+        else if (i == 2)
+        {
+            Console.WriteLine(" get 90 points!");
+        }
+        else if (i == 3)
+        {
+            Console.WriteLine(" get 80 points!");
+        }
+        else if (i == 4)
+        {
+            Console.WriteLine(" get 70 points!");
+        }
+        else if (i == 5)
+        {
+            Console.WriteLine(" get 60 points!");
+        }
+        else if (i == 6)
+        {
+            Console.WriteLine(" get 50 points!");
+        }
 
-    
-}
-
-
-if (PlayerNum != randomNumber)
-{
-    Console.WriteLine("You've used up all your tries, the number was " + randomNumber);
+    }
+    if (PlayerNum != randomNumber)
+    {
+        Console.WriteLine("You've used up all your tries, the number was " + randomNumber);
+    }
 }
